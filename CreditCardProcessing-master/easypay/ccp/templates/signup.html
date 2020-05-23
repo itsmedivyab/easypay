@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Pay</title>
+    <!-- <link rel="stylesheet" href="stylesignup.css"> -->
+    <!-- <link rel="stylesheet" href="responsive.css"> -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/
+    font-awesome.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEU7iMP///8qgcDE2es1hcIvg8Gev91yptHd6fOwy+Q8isTS4fA3hsIif7/4+/3l7vaSuNrs8/mIstd+rNRdmstGjsZXlsq50efz9/uoxuFnn87O3+6Ntdmhwt9Nksi70ud5qdPcqUlWAAAE+0lEQVR4nO2d2ZaqMBBFk5iISIIKqAhq9/9/5UXtvu3UTilXDunab77VXhlgWSdEyAtmg2FZjUXfGFflcDC71BFnv+vVQimtQ5f7ElorVaX1TcNJ6YwNXagX1rhy8qthXbp+Dt4pWhX5dcO2p5PzEmPba4Zr1+/5eYx100vDRoUuixSXnBsuTOiaiFHNqWEVyxL8QSXHhkVsI7jDDX8MBy50NW/BZd+Gdc+f8r/zbVjGtwgPmOnBcBTnHN2hZnvDJNYh7F7g1jvDWbxD2A1i3hkOY3xSfGOWneE2dBXvxDZSRD1Ju0HMxUfMk7RbiJmYxruT7jCpSGJ9nzlg12IbuWESuoK3U4Uu4O3MQxfAMAzDMAzDMAzDMP3Gqtew/fjbSKttkbaj52nTcqzwHa0rRvJ12gW6o6quxOee4gO7J32U1XmZ2Rz4j/ivAIQnNW74U39SCAJ33q2lEZRyCtoSUx9UhrmG3G3smEpQygJyszEk28yBFnIlOp8n/TmIhvY8Fu8FYtNIJ/frfpwGcKuhXIaYaTuTUhp+AhqqAaXhAnCW0hoi7qWkhiPEswOkhpCBQlJDAbgMSQ1XiENIaQiamCQ0BM2i0RmiHuGhMpxsQQWJDOsp7v+l/ob5aJkoyF30wG3DoTN3UcqgTtA9dwyBx+ZR2DB0ff6wYej6/GHD0PX5w4ah6/OHDUPX5w8bhq7PHzYMXZ8/bBi6Pn/YMHR9/rBh6Pr8YcPQ9fnDhqHr8+evG07dHZTBzneLe4aTNrtJ234MK4c90ATdtTwdIzvS9A83mC38PUQ94BHuySCqLvcMM+MtCJMKGepEpctirEG3GzpD0LMIlImhNWY7n9AQdCVSJvcwFyKlIWIGmtYQMalPa4i51VAaYh7sojREPDFDa4j5yCc0nCCeRSA13ET/PIQ8i0BpiHkWgdBwgvlWSmeYzzHnKJlhDRvVJzLMBKwgieHkE/nKIk/DvM5WFbLf3c6MHt9EaKfQGxd3DJW9TejyH+Cvd9fYsA+wYej6/GHD0PX5w4ah6/OHDUPX5w8bhq7PHzYMXZ8/bBi6Pn/YMHR9/rBh6Pr8YcPQ9fnDhqHr8+fPGz7wFSVjNGbM5Ivbhln6AJtpY4DbT0Q94KyEdaRLKlSYgSHKPM0QM41B+nVPyFEk/UIrZISW9kvJiE1hWsMl4DylNURM7xEbAgahiQ0HeNOU2BAwoUhsCPjdebp7dA7gzVLa2x8Qzz5pggvJjsGbpbYiFQTcaYTKKQ2XeLOUeKtp8J74wm4JBWd4W2mHWtIZAr60dVhTUwmi3g+oqbbTHPHKrj1UipjngPfoOcH1cjPcQyU7XOG7GFe49z8c0C5Zvnxjbj4aasBH/TnaqHHVJM/TbK1DP3TxjbVWP48F/HOGYRiGYRiGYRiGYRgMYP95pcHORRW6hjdTCcj8GB26FMO4Dc1GAOZyKFGtAL3FnApVC+Qujz+2kgI0jUuESTvDOuZp6vLOEDNvTIMu5M4QMZlDhJvtDWXRg37dS5hdDG1niPoVe2+s/DKUgzjnqWv/G8p1jE8MNZQ/hjKJbymaUh4byiY2RZXIU0OZxDVRXSnPDeUU9tTfC7iNvDSUAx3Ly40RmbxmKPPCxeCo3Une/Niwe4Ere5PX+QVr3Po0j3VqKGW9WihldA+DO9Zao1SVnmfNzw13ku2qqLbj0BU/yXjbrNPsSpT+H06iSy+c86rOAAAAAElFTkSuQmCC" />
+    <style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Lucida Grande";
+}
+
+a {
+  text-decoration: none;
+}
+
+.clear {
+  clear: left;
+}
+.column1{
+    float: left;
+	text-align:right;
+    width: 40%;
+    padding: 10px;
+}
+.column2{
+    float:left;
+    width: 60%;
+    padding: 10px;
+	text-color:red;
+}
+.row:after{
+    display: table;
+	content:""
+    clear: both;
+	float:left;
+	padding-top: 80px;
+}
+.container1{
+padding-top: 60px;
+padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #f7f7f7;
+   border-radius: 5px;
+}
+input[type=text]{
+  width: 24%;
+  padding: 15px;
+  margin: 5px 5px 22px 5px;
+  display: inline-block;
+  border: none;
+  background-color:#D0D0D0;
+  border-radius:4px;
+}
+select{
+	width: 24%;
+  padding: 15px;
+  margin: 5px 5px 22px 5px;
+  display: inline-block;
+  border: none;
+  border-radius:4px;
+  background-color:#D0D0D0;
+}
+.progress-container {
+        background-color: black;
+		padding:14px;
+        width: 100%;
+    }
+	    
+    .step {
+       background-color: orange;
+       height: 30px;
+       width: 50%;
+   }
+
+.button{
+text-align:center;
+}
+.registerbtn {
+  background-color: #0277BD;
+  color: white;
+  padding: 16px 5%;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  opacity: 0.8;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.aaa{
+padding: 80px 0 100px 0;
+}
+.apply-status{
+ background-image: url("signup1.jpg");
+ height: 20%;
+  color: white;
+  text-align: center;
+}
+.apply-status h1{
+opacity:0.8;
+ font-size: 50px;
+ letter-spacing: 5px;
+ margin-bottom: 10px;
+}
+.top-wrapper {
+  padding: 180px 0 100px 0;
+  background-image: url("home1234.jpg");
+  height: 100%;
+  background-size: cover;
+  color: white;
+  text-align: center;
+}
+
+.top-wrapper h1 {
+  opacity: 0.7;
+  font-size: 50px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+.top-wrapper p {
+  opacity: 0.7;
+  margin-bottom: 3px;
+  font-size: 20px;
+}
+
+.btn-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn-wrapper p {
+  margin: 10px 0;
+}
+
+.signup {
+  background-color: #239b76;
+}
+
+.facebook {
+  background-color: #3b5998;
+  margin-right: 10px;
+}
+
+.twitter {
+  background-color: #55acee;
+}
+
+.btn {
+  padding: 12px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+header {
+  height: 55px;
+  width: 100%;
+  background-color: rgba(34, 49, 52, 0.9);
+  position :fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  width: 124px;
+  margin-top: 20px;
+}
+
+.header-left {
+  float: left;
+  margin-left: -25px;
+}
+
+.header-right {
+  float: right;
+  margin-right: -25px;
+}
+.header-left a {
+  line-height: 75px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: right;
+  transition: all 0.5s;
+}
+.header-right a {
+  line-height: 75px;
+  padding: 0 25px;
+  color: white;
+  display: block;
+  float: left;
+  transition: all 0.5s;
+}
+
+.header-left a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.header-right a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Add CSS for menu-icon */
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 21px 0;
+  /* Change the display property to none */
+  display:none;
+}
+
+
+.cards-wrapper {
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  height:100%;
+  background-color:#f7f7f7;
+  text-align: center;
+}
+
+.heading {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #5f5d60;
+}
+
+.heading h2 {
+  font-weight: normal;
+}
+.cards1234{
+float :left;
+}
+.cards{
+float:left;
+width:50%;
+padding-top:40px;
+padding-bottom:30px;
+}
+.cards-icon {
+  position: relative;
+}
+
+.cards-icon p{
+  position: absolute;
+  top: 44%;
+  bottom: 40%;
+  width: 100%;
+  color: white;
+}
+
+.text-contents {
+  width: 80%;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 15px;
+  color: #b3aeb5;
+}
+
+.heading h3 {
+  font-weight: normal;
+}
+
+.message-wrapper {
+	padding-top: 60px;
+	  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.message {
+  padding: 15px 20px;
+  background-color: #5dca88;
+  cursor: pointer;
+  box-shadow: 0 7px #1a7940;
+}
+
+.message:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+footer img {
+  width: 125px;
+}
+
+footer p {
+  color: #b3aeb5;
+  font-size: 12px;
+}
+
+footer {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}</style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <!-- Add a menu icon here -->
+      </div>
+    </header>
+    <div class="apply-status">
+	<!--	<div class="progress-container">
+                <div class="step"></div>
+            </div> --> 
+		<div class="aaa">
+      <div class="container">
+        <h1>It's an easy 3step process for your card!</h1>
+      </div>
+	  </div>
+    </div>
+    <div class="cards-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>Choose your card to apply!</h2>
+        </div>
+        <div class="cards1234">
+          <div class="cards">
+            <div class="cards-icon">
+              <img src="card1.png">
+            </div>
+           <a href="form.html" ><span class="btn message">Apply for a card</span></a>
+		   	<p1></p1><br>
+          </div>
+          <div class="cards">
+            <div class="cards-icon">
+              <img src="card2.png">
+            </div>
+            <span class="btn message">Apply for a card</span>
+				<p1></p1><br>
+          </div>
+          <div class="cards">
+            <div class="cards-icon">
+              <img src="card3.png">
+            </div>
+            <span class="btn message">Apply for a card</span>
+          </div>
+          <div class="cards">
+            <div class="cards-icon">
+              <img src="card3.png">
+            </div>
+            <span class="btn message">Apply for a card</span>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div class="message-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>Ready to have an easy payment gateway?</h2>
+          <h3>Start paying through online credit card processing!</h3>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <img src="logo12.png">
+        <p>online pay.</p>
+      </div>
+    </footer>
+  </body>
+</html>

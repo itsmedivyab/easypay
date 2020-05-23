@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>login form</title>
+     
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAY1BMVEU7iMP///8qgcDE2es1hcIvg8Gev91yptHd6fOwy+Q8isTS4fA3hsIif7/4+/3l7vaSuNrs8/mIstd+rNRdmstGjsZXlsq50efz9/uoxuFnn87O3+6Ntdmhwt9Nksi70ud5qdPcqUlWAAAE+0lEQVR4nO2d2ZaqMBBFk5iISIIKqAhq9/9/5UXtvu3UTilXDunab77VXhlgWSdEyAtmg2FZjUXfGFflcDC71BFnv+vVQimtQ5f7ElorVaX1TcNJ6YwNXagX1rhy8qthXbp+Dt4pWhX5dcO2p5PzEmPba4Zr1+/5eYx100vDRoUuixSXnBsuTOiaiFHNqWEVyxL8QSXHhkVsI7jDDX8MBy50NW/BZd+Gdc+f8r/zbVjGtwgPmOnBcBTnHN2hZnvDJNYh7F7g1jvDWbxD2A1i3hkOY3xSfGOWneE2dBXvxDZSRD1Ju0HMxUfMk7RbiJmYxruT7jCpSGJ9nzlg12IbuWESuoK3U4Uu4O3MQxfAMAzDMAzDMAzDMP3Gqtew/fjbSKttkbaj52nTcqzwHa0rRvJ12gW6o6quxOee4gO7J32U1XmZ2Rz4j/ivAIQnNW74U39SCAJ33q2lEZRyCtoSUx9UhrmG3G3smEpQygJyszEk28yBFnIlOp8n/TmIhvY8Fu8FYtNIJ/frfpwGcKuhXIaYaTuTUhp+AhqqAaXhAnCW0hoi7qWkhiPEswOkhpCBQlJDAbgMSQ1XiENIaQiamCQ0BM2i0RmiHuGhMpxsQQWJDOsp7v+l/ob5aJkoyF30wG3DoTN3UcqgTtA9dwyBx+ZR2DB0ff6wYej6/GHD0PX5w4ah6/OHDUPX5w8bhq7PHzYMXZ8/bBi6Pn/YMHR9/rBh6Pr8YcPQ9fnDhqHr8+evG07dHZTBzneLe4aTNrtJ234MK4c90ATdtTwdIzvS9A83mC38PUQ94BHuySCqLvcMM+MtCJMKGepEpctirEG3GzpD0LMIlImhNWY7n9AQdCVSJvcwFyKlIWIGmtYQMalPa4i51VAaYh7sojREPDFDa4j5yCc0nCCeRSA13ET/PIQ8i0BpiHkWgdBwgvlWSmeYzzHnKJlhDRvVJzLMBKwgieHkE/nKIk/DvM5WFbLf3c6MHt9EaKfQGxd3DJW9TejyH+Cvd9fYsA+wYej6/GHD0PX5w4ah6/OHDUPX5w8bhq7PHzYMXZ8/bBi6Pn/YMHR9/rBh6Pr8YcPQ9fnDhqHr8+fPGz7wFSVjNGbM5Ivbhln6AJtpY4DbT0Q94KyEdaRLKlSYgSHKPM0QM41B+nVPyFEk/UIrZISW9kvJiE1hWsMl4DylNURM7xEbAgahiQ0HeNOU2BAwoUhsCPjdebp7dA7gzVLa2x8Qzz5pggvJjsGbpbYiFQTcaYTKKQ2XeLOUeKtp8J74wm4JBWd4W2mHWtIZAr60dVhTUwmi3g+oqbbTHPHKrj1UipjngPfoOcH1cjPcQyU7XOG7GFe49z8c0C5Zvnxjbj4aasBH/TnaqHHVJM/TbK1DP3TxjbVWP48F/HOGYRiGYRiGYRiGYRgMYP95pcHORRW6hjdTCcj8GB26FMO4Dc1GAOZyKFGtAL3FnApVC+Qujz+2kgI0jUuESTvDOuZp6vLOEDNvTIMu5M4QMZlDhJvtDWXRg37dS5hdDG1niPoVe2+s/DKUgzjnqWv/G8p1jE8MNZQ/hjKJbymaUh4byiY2RZXIU0OZxDVRXSnPDeUU9tTfC7iNvDSUAx3Ly40RmbxmKPPCxeCo3Une/Niwe4Ere5PX+QVr3Po0j3VqKGW9WihldA+DO9Zao1SVnmfNzw13ku2qqLbj0BU/yXjbrNPsSpT+H06iSy+c86rOAAAAAElFTkSuQmCC" />
+  {%load static%}
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        body:before{
+            content: '';
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+	    
+            background-image: url("{% static "ccp/img1.jpg" %}");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+           
+        }
+        .contact-form
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 400px;
+            height: 500px;
+            padding: 80px 40px;
+            box-sizing: border-box;
+            background: rgba(0,0,0,.5);
+        }
+        .avatar {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            top: calc(-80px/2);
+            left: calc(50% - 40px);
+        }
+        .contact-form h2 {
+            margin: 0;
+            padding: 0 0 20px;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .contact-form p
+        {
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            color: #fff;
+        }
+        .contact-form input
+        {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="password"]
+        {
+            border: none;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+            font-size: 16px;
+        }
+        .contact-form input[type="submit"] {
+            height: 30px;
+            color: #fff;
+            font-size: 15px;
+            background: red;
+            cursor: pointer;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            margin-top: 15%;
+        }
+        <!-- .contact-form a -->
+        <!-- { -->
+            <!-- color: #fff; -->
+            <!-- font-size: 14px; -->
+            <!-- font-weight: bold; -->
+            <!-- text-decoration: none; -->
+        <!-- } -->
+       
+    </style>
+</head>
+<body>
+    <div class="contact-form">
+       <img src="{% static "ccp/2.jpg" %}"  class="avatar" alt="My image">
+       
+        <h2>Login Form</h2>
+	<p2 style="color:red"> {{msg}}</p2>
+        <form method="post" action="/ccp/login">
+	{%csrf_token%}
+            <p>Email</p>
+            <input type="text" name="Email" placeholder="Enter Email">
+            <p>Password</p>
+            <input type="password" name="Password" placeholder="Enter Password">
+            <input type="submit" name="" value="Sign In">
+        </form>
+    </div>
+</body>
+</html>
